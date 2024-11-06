@@ -1,46 +1,149 @@
-* {
-  box-sizing: border-box;
-}
-
+/* General Body Styles */
 body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
   margin: 0;
-  font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
-}
-
-nav {
+  padding: 30px;
+  background-color: #f4f4f4;
+  color: #333;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 0.5rem;
-  gap: 0.5rem;
-  border-bottom: solid 1px #aaa;
-  background-color: #eee;
+  align-items: center;
 }
 
-nav a {
-  display: inline-block;
-  min-width: 9rem;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  border: solid 1px #aaa;
+/* Paragraph Text Styling */
+p {
+  color: #0a2458;
+}
+
+.introduction,
+.first-section,
+.second-section {
+  max-width: 500px;
+  text-align: justify;
+}
+
+.first-section,
+.second-section,
+h2 {
+  color: #0a2458;
+}
+
+/* Header Styling */
+header {
+  padding: 0 35px;
+  margin: 0 auto;
   text-align: center;
-  text-decoration: none;
-  color: #555;
 }
 
-nav a[aria-current='page'] {
-  color: #000;
-  background-color: #d4d4d4;
+header img {
+  display: inline-block;
+  height: 20px;
+  vertical-align: top;
+  width: 20px;
 }
 
+.headerDate {
+  color: #0a2458;
+  padding-top: 8px;
+  font-family: "Decimal-Medium_Web", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 132%;
+}
+
+header h1 {
+  font-family: "MercurySSm-Book-Pro_Web", serif;
+  margin: 0;
+  color: #0a2458;
+  font-size: 2.875rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 132%;
+}
+
+/* Main Content Styling */
 main {
-  padding: 1rem;
+  padding: 2rem;
 }
 
-h1 {
-  font-weight: bold;
-  font-size: 1.5rem;
+/* Flexbox Layout for Content */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Styling */
+.section {
+  background-color: white;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.section p,
+.section ul {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.breadcrumb {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.breadcrumb p {
+  margin: 0;
+  padding: 0 5px;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .introduction,
+  .first-section,
+  .second-section {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+  }
+
+  header h1 {
+    font-family: "MercurySSm-Book-Pro_Web", serif;
+    margin: 0;
+    color: #0a2458;
+    font-size: 1.875rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    text-align: center;
+    line-height: 150%;
+  }
+
+  .section {
+    padding: 0.75rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
 }
